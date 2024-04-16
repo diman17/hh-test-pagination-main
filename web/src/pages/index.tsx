@@ -23,7 +23,8 @@ type TGetServerSideProps = {
 
 export const getServerSideProps = (async (ctx: GetServerSidePropsContext): Promise<{ props: TGetServerSideProps }> => {
   try {
-    const res = await fetch("http://localhost:3000/users", {method: 'GET'})
+    const API_URL = process.env.API_URL || 'http://localhost:3000'
+    const res = await fetch(`${API_URL}/users`, {method: 'GET'})
     if (!res.ok) {
       return {props: {statusCode: res.status, users: []}}
     }
