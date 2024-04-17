@@ -15,11 +15,7 @@ $font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.page-link
-:not(:first-child)
-:not(:last-child)
-:not(:nth-child(2))
-:not(:nth-last-child(2)) {
+.page-item:not(:first-child):not(:last-child):not(:nth-child(2)):not(:nth-last-child(2)) .page-link {
   min-width: 3.2rem;
 
   text-align: center;
