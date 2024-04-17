@@ -133,7 +133,6 @@ export default function Home({statusCode, users, total, page, limit}: TGetServer
 
               return (
                 <Pagination.Item
-                  linkStyle={{minWidth: '3.2rem', textAlign: 'center', letterSpacing: '-0.1rem'}}
                   key={p}
                   active={p === page}
                   onClick={() => handlePageChange(p)}
